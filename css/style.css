@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body{
@@ -16,7 +17,7 @@ body{
     padding-top: 15px;
     z-index: 2;
     padding-bottom: 2px;
-    height: 30px;
+    height: 45px;
 }
 
 div nav ul li {
@@ -90,7 +91,6 @@ p {
 
 .imagen-nosotros {
     width: 620px;
-    border: 2px solid black;
 }
 
 .nosotros-titulo {
@@ -127,7 +127,6 @@ p {
 .container-img .box-img figure{
     width: 100%;
     height: 100%;
-    border: 1px solid black;
 }
 .container-img .box-img img{
     width: 100%;
@@ -141,10 +140,9 @@ p {
     grid-row-start: span 2;
 }
 
-img:hover {
+.img1:hover {
     transform: scale(1.1);
     transition: 1s;
-    border: 1px solid black;
 }
 
 
@@ -225,4 +223,68 @@ img:hover {
 .mapa {
     width: 450px;
     height: 300px;
+}
+
+
+/* MEDIA QUERYS */
+
+/* Galeria QUERY*/
+
+@media screen and (max-width:500px){
+    .container-img{
+        width: 90%;
+        grid-template-columns: repeat(auto-fill);
+        display: block;
+    }
+    .container-img .box-img img{
+        height: 200px;
+        max-width: 100%;
+        padding-bottom: 10px;
+        
+    }
+
+    img:hover{
+        border: none;
+    }
+}
+
+/* NAVBAR QUERY*/
+
+@media screen and (max-width:500px){
+    .navbar{
+        padding-right: 35px;
+    }
+
+    .cell{
+        color: transparent;
+        -webkit-text-stroke: transparent;
+    }
+}
+
+/* NOSOTROS QUERY */
+
+@media screen and (max-width:500px){
+    .contenedor-resto{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .nosotros-container{
+        text-align: center;
+    }
+
+    .imagen-nosotros{
+        max-width: 500px;
+    }
+}
+
+/* CONTACTO */
+
+@media screen and (max-width:500px){
+    .container-form{
+        width: 450px;
+        display: block;
+        padding: 15px;
+    }
 }
